@@ -28,4 +28,4 @@ retype start
 
 ### Editando o conteúdo
 
-Basta criar/editar os arquivos `.md` e o github irá atualizar o site automaticamente.
+Basta criar/editar os arquivos `.md` e o servidor local irá atualizar o site automaticamente. Quando o conteúdo for para a main, [o site](https://artistrea.github.io/BDocs/) será atualizado automaticamente.
