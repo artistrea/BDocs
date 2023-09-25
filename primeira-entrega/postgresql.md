@@ -1,3 +1,8 @@
+---
+icon: database
+order: 1
+---
+
 # PostgreSQL
 
 Não é necessário instalar o PostgreSQL, pois ele será executado em um container Docker. Instale o Docker seguindo as instruções em [primeira-entrega/docker.md](./docker.md).
