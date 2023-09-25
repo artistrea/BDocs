@@ -61,12 +61,6 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 
 3. Verifique a instalação:
 
-Veja se o docker-compose está funcionando:
-
-```bash
-docker-compose --version
-```
-
 E o Docker também:
 
 ```bash

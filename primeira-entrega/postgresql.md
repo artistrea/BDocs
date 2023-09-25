@@ -14,7 +14,7 @@ Não é necessário instalar o PostgreSQL, pois ele será executado em um contai
 Esteja na pasta que possui o `docker-compose.yml` e execute o comando abaixo para iniciar o container:
 
 ```bash
-sudo docker-compose up
+sudo docker compose up
 ```
 
 Esse comando inicia o container de acordo com o `docker-compose.yml`:
@@ -44,7 +44,7 @@ services:
 
 ### Executando comandos no container
 
-É possível executar comandos no container, como `psql`. Para isso entramos no `bash` do container usando o comando `docker-compose exec`:
+É possível executar comandos no container, como `psql`. Para isso entramos no `bash` do container usando o comando `docker exec`:
 
 ```bash
 sudo docker exec -it bd_container /bin/bash
@@ -63,7 +63,7 @@ Usando o que foi visto até agora, podemos testar a conexão com o banco de dado
 Rode em um terminal o banco de dados:
 
 ```bash
-sudo docker-compose up
+sudo docker compose up
 ```
 
 Em outro terminal veja se os scripts de inicialização foram executados:
@@ -89,7 +89,7 @@ Deve ser mostrada a tabela com nome `sometable`:
 Para limpar totalmente o container, removendo todos os dados, schemas, etc., execute:
 
 ```bash
-sudo docker-compose down --volumes
+sudo docker compose down --volumes
 ```
 
 ```bash
