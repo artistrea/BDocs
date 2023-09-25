@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/BDocs">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.748964771196">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.748973082059">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -12,6 +12,7 @@
     <!-- Primary Meta Tags -->
     <title>Docker</title>
     <meta name="title" content="Docker">
+    <meta name="description" content="O projeto utiliza o Docker para facilitar o desenvolvimento e a execução do projeto.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://artistrea.github.io/BDocs/primeira-entrega/docker/">
@@ -20,19 +21,22 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://artistrea.github.io/BDocs/primeira-entrega/docker/">
     <meta property="og:title" content="Docker">
+    <meta property="og:description" content="O projeto utiliza o Docker para facilitar o desenvolvimento e a execução do projeto.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://artistrea.github.io/BDocs/primeira-entrega/docker/">
     <meta property="twitter:title" content="Docker">
+    <meta property="twitter:description" content="O projeto utiliza o Docker para facilitar o desenvolvimento e a execução do projeto.">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.5.0.748964771196" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.5.0.748973082059" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.748964771196" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.748973082059" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.748964771196" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.748973082059" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.748973082059" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -167,6 +171,111 @@
         <span>Docker</span>
     </h1>
 </doc-anchor-target>
+<p>O projeto utiliza o Docker para facilitar o desenvolvimento e a execução do projeto.</p>
+<doc-anchor-target id="instalação-ubuntu">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#instalação-ubuntu">#</doc-anchor-trigger>
+        <span>Instalação Ubuntu</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="evitando-conflitos">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#evitando-conflitos">#</doc-anchor-trigger>
+        <span>Evitando conflitos</span>
+    </h3>
+</doc-anchor-target>
+<p>Verfique estar usando um entre:</p>
+<ul>
+<li>Ubuntu Lunar 23.04</li>
+<li>Ubuntu Kinetic 22.10</li>
+<li>Ubuntu Jammy 22.04 (LTS)</li>
+<li>Ubuntu Focal 20.04 (LTS)</li>
+</ul>
+<p>E desinstale pacotes não oficiais, caso os tenha:</p>
+<ul>
+<li>docker.io</li>
+<li>docker-compose</li>
+<li>docker-doc</li>
+<li>podman-docker</li>
+</ul>
+<p>O Docker Engine depende do <code v-pre>containerd</code> e do <code v-pre>runc</code>, mas os junta em um pacote só. Se você tiver instalado o <code v-pre>containerd</code> ou o <code v-pre>runc</code>, desinstale-os.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do sudo apt-get remove $pkg; done</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="instalando">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#instalando">#</doc-anchor-trigger>
+        <span>Instalando</span>
+    </h3>
+</doc-anchor-target>
+<p>Existem <a href="https://docs.docker.com/engine/install/ubuntu/#installation-methods">diferentes maneiras de instalar</a> o Docker no Ubuntu. A mais simples é usar o apt.</p>
+<ol>
+<li>Adicione o repositorio oficial do Docker:</li>
+</ol>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash"># Add Docker's official GPG key:
+sudo apt-get update
+sudo apt-get install ca-certificates curl gnupg
+sudo install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+sudo chmod a+r /etc/apt/keyrings/docker.gpg
+
+# Add the repository to Apt sources:
+echo \
+  &quot;deb [arch=&quot;$(dpkg --print-architecture)&quot; signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  &quot;$(. /etc/os-release &amp;&amp; echo &quot;$VERSION_CODENAME&quot;)&quot; stable&quot; | \
+  sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
+sudo apt-get update</code></pre>
+</doc-codeblock></div>
+<ol start="2">
+<li>Instale os pacotes necessários:</li>
+</ol>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin</code></pre>
+</doc-codeblock></div>
+<ol start="3">
+<li>Verifique a instalação:</li>
+</ol>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">sudo docker run hello-world</code></pre>
+</doc-codeblock></div>
+<p>E o Docker deve rodar a imagem e mostrar uma mensagem de sucesso:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">Unable to find image 'hello-world:latest' locally
+latest: Pulling from library/hello-world
+719385e32844: Pull complete
+Digest: sha256:4f53e2564790c8e7856ec08e384732aa38dc43c52f02952483e3f003afbf23db
+Status: Downloaded newer image for hello-world:latest
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the &quot;hello-world&quot; image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="pós-instalação">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#pós-instalação">#</doc-anchor-trigger>
+        <span>Pós Instalação</span>
+    </h2>
+</doc-anchor-target>
+<p>Se quiser rodar <code v-pre>docker</code> sem <code v-pre>sudo</code>, siga as <a href="https://docs.docker.com/engine/install/linux-postinstall/">instruções do site oficial</a>.</p>
+<p>Verifique se a sessão da documentação em <a href="../postgresql/">primeira-entrega/postgresql</a> funciona com o Docker.</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -233,6 +342,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Docker", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Docker", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
