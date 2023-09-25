@@ -10,24 +10,24 @@
     <meta name="generator" content="Retype 3.5.0">
 
     <!-- Primary Meta Tags -->
-    <title>PostgreSQL</title>
-    <meta name="title" content="PostgreSQL">
-    <meta name="description" content="Não é necessário instalar o PostgreSQL, pois ele será executado em um container Docker. Instale o Docker seguindo as instruções em ">
+    <title>Motiva&#231;&#227;o do uso de aplica&#231;&#245;es</title>
+    <meta name="title" content="Motivação do uso de aplicações">
+    <meta name="description" content="Documentação que visa a explicar o porquê dos softwares utilizados terem sido escolhidos.">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://artistrea.github.io/BDocs/primeira-entrega/postgresql/">
+    <link rel="canonical" href="https://artistrea.github.io/BDocs/primeira-entrega/motivacao/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://artistrea.github.io/BDocs/primeira-entrega/postgresql/">
-    <meta property="og:title" content="PostgreSQL">
-    <meta property="og:description" content="Não é necessário instalar o PostgreSQL, pois ele será executado em um container Docker. Instale o Docker seguindo as instruções em ">
+    <meta property="og:url" content="https://artistrea.github.io/BDocs/primeira-entrega/motivacao/">
+    <meta property="og:title" content="Motivação do uso de aplicações">
+    <meta property="og:description" content="Documentação que visa a explicar o porquê dos softwares utilizados terem sido escolhidos.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://artistrea.github.io/BDocs/primeira-entrega/postgresql/">
-    <meta property="twitter:title" content="PostgreSQL">
-    <meta property="twitter:description" content="Não é necessário instalar o PostgreSQL, pois ele será executado em um container Docker. Instale o Docker seguindo as instruções em ">
+    <meta property="twitter:url" content="https://artistrea.github.io/BDocs/primeira-entrega/motivacao/">
+    <meta property="twitter:title" content="Motivação do uso de aplicações">
+    <meta property="twitter:description" content="Documentação que visa a explicar o porquê dos softwares utilizados terem sido escolhidos.">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
@@ -36,7 +36,6 @@
     <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.748987045999" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
     <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.748987045999" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.748987045999" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -165,104 +164,48 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="postgresql" class="break-words">
+<doc-anchor-target id="motivação-do-uso-de-aplicações" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#postgresql">#</doc-anchor-trigger>
-        <span>PostgreSQL</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#motivação-do-uso-de-aplicações">#</doc-anchor-trigger>
+        <span>Motivação do uso de aplicações</span>
     </h1>
 </doc-anchor-target>
-<p>Não é necessário instalar o PostgreSQL, pois ele será executado em um container Docker. Instale o Docker seguindo as instruções em <a href="../docker/">primeira-entrega/docker.md</a>.</p>
-<doc-anchor-target id="rodando-o-postgresql">
+<p>Documentação que visa a explicar o porquê dos softwares utilizados terem sido escolhidos.</p>
+<doc-anchor-target id="svelte">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#rodando-o-postgresql">#</doc-anchor-trigger>
-        <span>Rodando o PostgreSQL</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#svelte">#</doc-anchor-trigger>
+        <span>Svelte</span>
     </h2>
 </doc-anchor-target>
-<doc-anchor-target id="iniciando-o-container">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#iniciando-o-container">#</doc-anchor-trigger>
-        <span>Iniciando o container</span>
-    </h3>
+<p>Ao pensar em um framework para ser utilizado no front-end, surgiu-nos a ideia de, ao invés do React, usar o Svelte, haja vista sua proposta simplista, e a presença de integrantes do grupo inexperientes na área. Assim, tornar-se-ia mais fácil a contribuição de todos os membros da equipe.</p>
+<doc-anchor-target id="flask">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#flask">#</doc-anchor-trigger>
+        <span>Flask</span>
+    </h2>
 </doc-anchor-target>
-<p>Esteja na pasta que possui o <code v-pre>docker-compose.yml</code> e execute o comando abaixo para iniciar o container:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-bash"><code v-pre class="language-bash">sudo docker compose up</code></pre>
-</doc-codeblock></div>
-<p>Esse comando inicia o container de acordo com o <code v-pre>docker-compose.yml</code>:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-yaml"><code v-pre class="language-yaml">version: &quot;3.3&quot;
-
-services:
-  db:
-    container_name: bd_container
-    image: postgres:15.4-alpine
-    restart: always
-    environment:
-      POSTGRES_PASSWORD: 123456
-      POSTGRES_USER: bd_projeto
-      POSTGRES_DB: bd_projeto_db
-      TZ: &quot;America/Sao_Paulo&quot;
-    ports:
-      - 5436:5432
-    volumes:
-      # map initialization scripts:
-      - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
-#
-# Use this PostgreSQL url to connect to the database:
-# postgresql://bd_projeto:123456@localhost:5436/bd_projeto_db</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="executando-comandos-no-container">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#executando-comandos-no-container">#</doc-anchor-trigger>
-        <span>Executando comandos no container</span>
-    </h3>
+<p>Ainda no intuito de tornar a configuração e o desenvolvimento tão simples quanto possível, optamos por usar o Flask como framework de desenvolvimento back-end. Nesse sentido, note que para instalá-lo bastar usar um simples comando no terminal, fator atrativo à nossa atenção.</p>
+<doc-anchor-target id="dockerdocker-compose">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#dockerdocker-compose">#</doc-anchor-trigger>
+        <span>Docker/docker-compose</span>
+    </h2>
 </doc-anchor-target>
-<p>É possível executar comandos no container, como <code v-pre>psql</code>. Para isso entramos no <code v-pre>bash</code> do container usando o comando <code v-pre>docker exec</code>:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-bash"><code v-pre class="language-bash">sudo docker exec -it bd_container /bin/bash</code></pre>
-</doc-codeblock></div>
-<p>E de dentro do terminal rodamos o comando <code v-pre>psql</code>:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-bash"><code v-pre class="language-bash">psql -U bd_projeto -d bd_projeto_db</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="testando-se-tudo-está-funcionando">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#testando-se-tudo-está-funcionando">#</doc-anchor-trigger>
-        <span>Testando se tudo está funcionando</span>
-    </h4>
+<p>O Docker havia sido utilizado por um colega da equipe em uma experiência profissional, o qual já possui experiência com o software e um acervo exemplo de sua utilização, de forma a facilitar nosso trabalho. Dessa forma, achamos por bem utilizá-lo.</p>
+<doc-anchor-target id="postgresql">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#postgresql">#</doc-anchor-trigger>
+        <span>PostgreSQL</span>
+    </h2>
 </doc-anchor-target>
-<p>Usando o que foi visto até agora, podemos testar a conexão com o banco de dados:</p>
-<p>Rode em um terminal o banco de dados:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-bash"><code v-pre class="language-bash">sudo docker compose up</code></pre>
-</doc-codeblock></div>
-<p>Em outro terminal veja se os scripts de inicialização foram executados:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-bash"><code v-pre class="language-bash">sudo docker exec -it bd_container /bin/bash
-psql -U bd_projeto -d bd_projeto_db
-\dt</code></pre>
-</doc-codeblock></div>
-<p>Deve ser mostrada a tabela com nome <code v-pre>sometable</code>:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-bash"><code v-pre class="language-bash">            List of relations
- Schema |   Name    | Type  |   Owner
---------+-----------+-------+------------
- public | sometable | table | bd_projeto
-(1 row)</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="limpando-o-container">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#limpando-o-container">#</doc-anchor-trigger>
-        <span>Limpando o container</span>
-    </h3>
+<p>A motivação em usar o Postgres como SGBD foi a de que, por ser um software amplamente utilizado nos dias atuais, foi, basicamente, o único SGBD com o qual a maior parte do grupo já possuía alguma experiêcnia. Assim, na ideia de facilitar o processo de desenvolvimento, decidimos por usá-lo.</p>
+<doc-anchor-target id="dbdiagram">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#dbdiagram">#</doc-anchor-trigger>
+        <span>DBDiagram</span>
+    </h2>
 </doc-anchor-target>
-<p>Para limpar totalmente o container, removendo todos os dados, schemas, etc., execute:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-bash"><code v-pre class="language-bash">sudo docker compose down --volumes</code></pre>
-</doc-codeblock></div>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-bash"><code v-pre class="language-bash">psql -h localhost -U bd_projeto -d bd_projeto_db</code></pre>
-</doc-codeblock></div>
+<p>Como software de auxílio à modelagem do banco de dados optamos pelo DBDiagram. Essa escolha foi baseada na sugestão de um dos integrantes do grupo, o qual versou sobre a facilidade do uso dessa aplicação, além dela ser online, facilitando o desenvolvimento em equipe.</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -272,20 +215,20 @@ psql -U bd_projeto -d bd_projeto_db
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../primeira-entrega/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../primeira-entrega/flask/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Primeira entrega</span>
+                                                <span class="block mt-1">Flask</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../primeira-entrega/docker/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../primeira-entrega/svelte/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Docker</span>
+                                                <span class="block mt-1">Svelte</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -329,6 +272,6 @@ psql -U bd_projeto -d bd_projeto_db
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "PostgreSQL", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Motivação do uso de aplicações", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
