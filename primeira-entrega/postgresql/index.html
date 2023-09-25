@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/BDocs">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.748973689722">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.748981003063">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -31,12 +31,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.5.0.748973689722" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.5.0.748981003063" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.748973689722" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.748981003063" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.748973689722" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.748973689722" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.748981003063" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.748981003063" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -186,7 +186,7 @@
 </doc-anchor-target>
 <p>Esteja na pasta que possui o <code v-pre>docker-compose.yml</code> e execute o comando abaixo para iniciar o container:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-bash"><code v-pre class="language-bash">sudo docker-compose up</code></pre>
+<pre class="language-bash"><code v-pre class="language-bash">sudo docker compose up</code></pre>
 </doc-codeblock></div>
 <p>Esse comando inicia o container de acordo com o <code v-pre>docker-compose.yml</code>:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
@@ -217,7 +217,7 @@ services:
         <span>Executando comandos no container</span>
     </h3>
 </doc-anchor-target>
-<p>É possível executar comandos no container, como <code v-pre>psql</code>. Para isso entramos no <code v-pre>bash</code> do container usando o comando <code v-pre>docker-compose exec</code>:</p>
+<p>É possível executar comandos no container, como <code v-pre>psql</code>. Para isso entramos no <code v-pre>bash</code> do container usando o comando <code v-pre>docker exec</code>:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-bash"><code v-pre class="language-bash">sudo docker exec -it bd_container /bin/bash</code></pre>
 </doc-codeblock></div>
@@ -234,7 +234,7 @@ services:
 <p>Usando o que foi visto até agora, podemos testar a conexão com o banco de dados:</p>
 <p>Rode em um terminal o banco de dados:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-bash"><code v-pre class="language-bash">sudo docker-compose up</code></pre>
+<pre class="language-bash"><code v-pre class="language-bash">sudo docker compose up</code></pre>
 </doc-codeblock></div>
 <p>Em outro terminal veja se os scripts de inicialização foram executados:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
@@ -258,7 +258,7 @@ psql -U bd_projeto -d bd_projeto_db
 </doc-anchor-target>
 <p>Para limpar totalmente o container, removendo todos os dados, schemas, etc., execute:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-bash"><code v-pre class="language-bash">sudo docker-compose down --volumes</code></pre>
+<pre class="language-bash"><code v-pre class="language-bash">sudo docker compose down --volumes</code></pre>
 </doc-codeblock></div>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-bash"><code v-pre class="language-bash">psql -h localhost -U bd_projeto -d bd_projeto_db</code></pre>
