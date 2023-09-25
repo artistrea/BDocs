@@ -23,3 +23,7 @@ Motivação: Interesse do grupo em aprender;
 Banco de Dados: Postgres;
 
 Motivação: Conhecido por parte da equipe, possuímos docker-compose pronto para uso;
+
+Prototipação: DBDiagram;
+
+Motivação: Ferramenta simples e fácil de usar; fácil migrar para uma ferramenta CASE completa
