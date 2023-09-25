@@ -2,13 +2,17 @@
 icon: package-dependencies
 ---
 
-# Decisões do projeto
+# Primeira entrega
+
+Nessa primeira entrega, o objetivo é definir as ferramentas a serem usadas e documentar o setup necessário para o desenvolvimento do projeto.
+
+## Decisões do projeto
 
 ---
 
-Frontend: React;
+Frontend: Svelte;
 
-Motivação: Conhecido por parte da equipe;
+Motivação: Super simples, fácil de aprender;
 
 ---
 
@@ -18,4 +22,4 @@ Motivação: Interesse do grupo em aprender;
 
 Banco de Dados: Postgres;
 
-Motivação: Conhecido por parte da equipe;
+Motivação: Conhecido por parte da equipe, possuímos docker-compose pronto para uso;
