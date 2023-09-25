@@ -8,7 +8,7 @@ Essa documentação utiliza [retype](https://retype.com/) para gerar o site est�
 
 ### Instalando o retype
 
-Basta ter o `npm`, instalado automaticamente com o node:
+Basta ter o `npm`, que é instalado automaticamente com o node:
 
 ```bash
 sudo apt install nodejs
