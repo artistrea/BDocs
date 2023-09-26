@@ -6,7 +6,7 @@ icon: package-dependencies
 
 Nessa primeira entrega, o objetivo é definir as ferramentas a serem usadas e documentar o setup necessário para o desenvolvimento do projeto.
 
-## Participantes do grupo
+## Grupo 08
 - Artur Padoves - 211038208
 - Miguel Mendes - 211026501
 - Pedro Ximenes - 200026071
