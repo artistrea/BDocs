@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/BDocs">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.749047753465">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.749047778638">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -12,6 +12,7 @@
     <!-- Primary Meta Tags -->
     <title>Svelte</title>
     <meta name="title" content="Svelte">
+    <meta name="description" content="O framework que será utilizado para o frontend deste projeto será o Svelte, usando como linguagem base o Typescript (mais informações consulte a...">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://artistrea.github.io/BDocs/primeira-entrega/svelte/">
@@ -20,19 +21,22 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://artistrea.github.io/BDocs/primeira-entrega/svelte/">
     <meta property="og:title" content="Svelte">
+    <meta property="og:description" content="O framework que será utilizado para o frontend deste projeto será o Svelte, usando como linguagem base o Typescript (mais informações consulte a...">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://artistrea.github.io/BDocs/primeira-entrega/svelte/">
     <meta property="twitter:title" content="Svelte">
+    <meta property="twitter:description" content="O framework que será utilizado para o frontend deste projeto será o Svelte, usando como linguagem base o Typescript (mais informações consulte a...">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.5.0.749047753465" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.5.0.749047778638" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.749047753465" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.749047778638" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.749047753465" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.749047778638" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.749047778638" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -167,6 +171,65 @@
         <span>Svelte</span>
     </h1>
 </doc-anchor-target>
+<p>O framework que será utilizado para o frontend deste projeto será o Svelte, usando como linguagem base o Typescript (mais informações consulte a documentação: <a href="https://svelte.dev/docs/introduction">https://svelte.dev/docs/introduction</a>).</p>
+<doc-anchor-target id="instalação-do-svelte">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#instalação-do-svelte">#</doc-anchor-trigger>
+        <span>Instalação do Svelte</span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="instalar-os-pré-requisitos">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#instalar-os-pré-requisitos">#</doc-anchor-trigger>
+        <span>Instalar os Pré-Requisitos</span>
+    </h4>
+</doc-anchor-target>
+<p>O framework necessita de um gerenciador de pacotes e do node.js para funcionar. O gerenciador utilizado neste trabalho é o npm. Para instalar ambos basta rodar no terminal:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">sudo apt install nodejs</code></pre>
+</doc-codeblock></div>
+<p>Isso instalará o Node.js e suas dependências, em conjunto com o gerenciador npm.</p>
+<p>Para verificar se foi instalado com sucesso, verique as versões de ambos no terminal:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">npm -v
+node -v</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="iniciar-um-projeto-em-svelte">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#iniciar-um-projeto-em-svelte">#</doc-anchor-trigger>
+        <span>Iniciar um projeto em Svelte</span>
+    </h4>
+</doc-anchor-target>
+<p>Esta etapa é necessária somente para a criação do projeto, não é preciso realizá-la caso já tenha um projeto Svelte aberto.</p>
+<p>Para instalar o Svelte, vá para o diretório desejado para instalar o framework (neste projeto, o local destinato encontra-se no diretório chamado &quot;framework&quot;).</p>
+<p>Abra um terminal no mesmo diretório e execute o código:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">npm create svelte@latest myapp</code></pre>
+</doc-codeblock></div>
+<p>Nas configurações iniciais, informadas no próprio terminal onde se iniciou o projeto, escolha as opções:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">├── Which Svelte app template?
+    ├── Skeleton project
+├── Add type checking with TypeScript?
+    ├── Yes, using TypeScript syntax
+├── Select additional options (use arrow keys/space bar)
+    ├── Add Vitest for unit testing    #Adicionaremos uma biblioteca de teste para utilizar no projeto.
+</code></pre>
+</doc-codeblock></div>
+<p>No resultado final, o diretório terá uma nova pasta chamada <code v-pre>myapp</code>.</p>
+<doc-anchor-target id="rodando-o-projeto-em-localhost">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#rodando-o-projeto-em-localhost">#</doc-anchor-trigger>
+        <span>Rodando o projeto em localhost</span>
+    </h4>
+</doc-anchor-target>
+<p>No mesmo diretório onde foi iniciado o Svelte, execute no terminal:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">cd myapp
+npm install
+npm run dev</code></pre>
+</doc-codeblock></div>
+<p>Ao final da execução, surgirá um endereço local que, quando for acessado no navegador local, a aplicação será mostrada ao usuário.</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -226,6 +289,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Svelte", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Svelte", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
