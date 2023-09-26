@@ -10,21 +10,24 @@
     <meta name="generator" content="Retype 3.5.0">
 
     <!-- Primary Meta Tags -->
-    <title>Svelte</title>
-    <meta name="title" content="Svelte">
+    <title>dbdiagram.io</title>
+    <meta name="title" content="dbdiagram.io">
+    <meta name="description" content="A dbdiagram.io é uma ferramenta simples e gratuita para desenhar diagramas de banco de dados ( ERDs ) digitando código DSL.">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://artistrea.github.io/BDocs/primeira-entrega/svelte/">
+    <link rel="canonical" href="https://artistrea.github.io/BDocs/primeira-entrega/dbdiagram/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://artistrea.github.io/BDocs/primeira-entrega/svelte/">
-    <meta property="og:title" content="Svelte">
+    <meta property="og:url" content="https://artistrea.github.io/BDocs/primeira-entrega/dbdiagram/">
+    <meta property="og:title" content="dbdiagram.io">
+    <meta property="og:description" content="A dbdiagram.io é uma ferramenta simples e gratuita para desenhar diagramas de banco de dados ( ERDs ) digitando código DSL.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://artistrea.github.io/BDocs/primeira-entrega/svelte/">
-    <meta property="twitter:title" content="Svelte">
+    <meta property="twitter:url" content="https://artistrea.github.io/BDocs/primeira-entrega/dbdiagram/">
+    <meta property="twitter:title" content="dbdiagram.io">
+    <meta property="twitter:description" content="A dbdiagram.io é uma ferramenta simples e gratuita para desenhar diagramas de banco de dados ( ERDs ) digitando código DSL.">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
@@ -33,6 +36,7 @@
     <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.749047753465" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
     <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.749047753465" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.749047753465" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -161,12 +165,38 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="svelte" class="break-words">
+<doc-anchor-target id="dbdiagramio" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#svelte">#</doc-anchor-trigger>
-        <span>Svelte</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#dbdiagramio">#</doc-anchor-trigger>
+        <span>dbdiagram.io</span>
     </h1>
 </doc-anchor-target>
+<p>A dbdiagram.io é uma ferramenta simples e gratuita para desenhar diagramas de banco de dados ( ERDs ) digitando código DSL.
+O dbdiagram usa o popular DBML ( Database Markup Language ).
+A ferramenta dbdiagram é disponibilizada de forma online através do navegador web através deste link:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">https://dbdiagram.io/home</code></pre>
+</doc-codeblock></div>
+<p>E em seguida clicar em &quot;Create your diagram&quot; no centro da página ou, clicar em &quot;Go to App&quot; no canto superior direito da página.</p>
+<hr>
+<doc-anchor-target id="criando-uma-conta">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#criando-uma-conta">#</doc-anchor-trigger>
+        <span>Criando uma conta</span>
+    </h2>
+</doc-anchor-target>
+<p>Para criar uma conta no dbdiagram.io, é nescessário que esteja na parte de criação dos diagramas; no canto superior esquerdo, deve-se clicar em &quot;Sign in&quot; e optar em
+entrar com a sua conta do Google ou, GitHub ou próopria da ferramenta.</p>
+<hr>
+<doc-anchor-target id="conta-no-dbdiagramio-através">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#conta-no-dbdiagramio-através">#</doc-anchor-trigger>
+        <span>Conta no dbdiagram.io através</span>
+    </h4>
+</doc-anchor-target>
+<p>É nescessário apenas de um endereço de e-mail para preencher o campo e clicar em &quot;Submit&quot;; após isso irá receber um código no endereço de e-mail preenchido;
+tendo inserido ocódigo, sera levado para uma tela para informar a sua função atual para utilização da ferramenta.</p>
+<p>Através da conta Google ou GitHub, é nescessário apenas clicar em uma das opções que abrirá uma mini guia para efetuar o login nas devidas plataformas.</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -176,16 +206,23 @@
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../primeira-entrega/motivacao/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../primeira-entrega/postgresql/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Motivação do uso dessas tecnologias</span>
+                                                <span class="block mt-1">Postgre​SQL</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../primeira-entrega/docker/">
+                                            <span>
+                                                <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
+                                                <span class="block mt-1">Docker</span>
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                        </a>
                                     </div>
                                 </nav>
                             </footer>
@@ -226,6 +263,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Svelte", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "dbdiagram.io", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
