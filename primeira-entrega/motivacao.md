@@ -1,9 +1,15 @@
-# Motivação do uso de aplicações
+---
+order: 0
+icon: light-bulb
+---
+
+# Motivação do uso dessas tecnologias
+
 Documentação que visa a explicar o porquê dos softwares utilizados terem sido escolhidos.
 
 ## Svelte
 
-Ao pensar em um framework para ser utilizado no front-end, surgiu-nos a ideia de, ao invés do React, usar o Svelte, haja vista sua proposta simplista, e a presença de integrantes do grupo inexperientes na área. Assim, tornar-se-ia mais fácil a contribuição de todos os membros da equipe.
+Ao pensar em um framework para ser utilizado no front-end, surgiu-nos a ideia de, ao invés do React (tecnologia que mais domina o mercado atualmente), usar o Svelte, haja vista sua proposta simplista, e a presença de integrantes do grupo inexperientes na área. Assim, tornar-se-ia mais fácil a contribuição de todos os membros da equipe.
 
 ## Flask
 
@@ -20,3 +26,5 @@ A motivação em usar o Postgres como SGBD foi a de que, por ser um software amp
 ## DBDiagram
 
 Como software de auxílio à modelagem do banco de dados optamos pelo DBDiagram. Essa escolha foi baseada na sugestão de um dos integrantes do grupo, o qual versou sobre a facilidade do uso dessa aplicação, além dela ser online, facilitando o desenvolvimento em equipe.
+
+Caso necessário, podemos migrar para uma ferramenta CASE mais completa.
