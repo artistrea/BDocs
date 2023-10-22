@@ -4,6 +4,14 @@ Documentação para o projeto de banco de dados da UnB
 
 Essa documentação utiliza [retype](https://retype.com/) para gerar o site estático.
 
+## Grupo 08
+
+- Artur Padoves - 211038208
+- Miguel Mendes - 211026501
+- Pedro Ximenes - 200026071
+- Samuel Carvalho - 211010388
+- Miguel Carvalho - 211068341
+
 ## Como contribuir
 
 ### Instalando o retype
