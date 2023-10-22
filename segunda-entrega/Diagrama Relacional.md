@@ -26,7 +26,7 @@ Começando pelo **ponto mais interessante**:
    - Fazer uma **tabela com os atributos comuns** entre os filhos (representando o pai). Então implementar **cada filho** como sua própria **tabela**, a qual tem **chave primária** que **também** funciona como **chave estrangeira** para seu **pai**;
    - Um **problema** conhecido dessa implementação é a dificuldade em **encontrar os filhos** a partir **do pai**. **Geralmente** é necessário **procurar em tabela por tabela** dos filhos. No entanto, utilizar o atributo **type** no **pai** é o suficiente para diferenciar em **qual tabela procurar**.
 
-Com todas essas considerações, e visto que não foram feitas todas as considerações possíveis, somente as pensadas mais relevantes para o problema, foi decidido que **a melhor opção é** usar **_Class Table Inheritance_**.
+**Finalmente**, com todas essas considerações, e visto que não foram feitas todas as considerações possíveis, somente as pensadas mais relevantes para o problema, foi decidido que **a melhor opção é** usar **_Class Table Inheritance_**.
 
 ### Outros Detalhes de Implementação
 
