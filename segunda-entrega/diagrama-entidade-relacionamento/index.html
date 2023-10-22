@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/BDocs">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.751308649881">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.751310780850">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -12,7 +12,7 @@
     <!-- Primary Meta Tags -->
     <title>Diagrama do Modelo Entidade-Relacionamento (MER)</title>
     <meta name="title" content="Diagrama do Modelo Entidade-Relacionamento (MER)">
-    <meta name="description" content="Alt text">
+    <meta name="description" content="O diagrama foi feito praticamente exatamente conforme as especificações.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://artistrea.github.io/BDocs/segunda-entrega/diagrama-entidade-relacionamento/">
@@ -21,23 +21,23 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://artistrea.github.io/BDocs/segunda-entrega/diagrama-entidade-relacionamento/">
     <meta property="og:title" content="Diagrama do Modelo Entidade-Relacionamento (MER)">
-    <meta property="og:description" content="Alt text">
+    <meta property="og:description" content="O diagrama foi feito praticamente exatamente conforme as especificações.">
     <meta property="og:image" content="https://artistrea.github.io/BDocs/segunda-entrega/diagramamer.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://artistrea.github.io/BDocs/segunda-entrega/diagrama-entidade-relacionamento/">
     <meta property="twitter:title" content="Diagrama do Modelo Entidade-Relacionamento (MER)">
-    <meta property="twitter:description" content="Alt text">
+    <meta property="twitter:description" content="O diagrama foi feito praticamente exatamente conforme as especificações.">
     <meta property="twitter:image" content="https://artistrea.github.io/BDocs/segunda-entrega/diagramamer.png">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.5.0.751308649881" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.5.0.751310780850" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.751308649881" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.751310780850" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.751308649881" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.751310780850" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -172,12 +172,27 @@
         <span>Diagrama do Modelo Entidade-Relacionamento (MER)</span>
     </h1>
 </doc-anchor-target>
+<p>O diagrama foi feito praticamente exatamente conforme as especificações.</p>
+<p>Diferenças:</p>
+<ul>
+<li>Foi colocado <strong>Data de Emprestimo</strong> como uma das <strong>chaves primárias</strong> da Entidade <strong>Emprestimos</strong>. Para isso, foram considerados que:
+<ul>
+<li>Um usuário pode pegar emprestado o mesmo livro em 2 datas diferentes. Portanto não basta que as chaves estrangeiras sejam usadas como <em>PK</em>&#x27;s;</li>
+<li>Um usuário não pode pegar um mesmo livro emprestado 2 vezes no mesmo dia;</li>
+</ul>
+</li>
+<li><strong>Herança</strong> de Item para Livros e Materiais Didaticos. Isso se deve ao fato de que:
+<ul>
+<li>Livros e Materiais Didáticos possuem muitos atributos em comum;</li>
+<li>ambos apresentam o relacionamento de empréstimos;</li>
+</ul>
+</li>
+</ul>
 <p><figure class="content-center">
-    <img src="../diagramamer.png" alt="Alt text">
-    <figcaption class="caption">Alt text</figcaption>
+    <img src="../diagramamer.png" alt="" class="w-full">
+    <figcaption class="caption"></figcaption>
 </figure>
 </p>
-<p>Escolhemos utilizar uma herança para Livros e Materiais, pois eles apresentam muitos atributos em comum e também o relacionamento em comum de empréstimos.</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -187,11 +202,11 @@
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../primeira-entrega/svelte/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../segunda-entrega/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Svelte</span>
+                                                <span class="block mt-1">Segunda entrega</span>
                                             </span>
                                         </a>
                                     </div>

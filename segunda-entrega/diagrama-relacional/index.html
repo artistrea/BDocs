@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/BDocs">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.751308649881">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.751310780850">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -12,7 +12,7 @@
     <!-- Primary Meta Tags -->
     <title>Diagrama do Modelo Relacional</title>
     <meta name="title" content="Diagrama do Modelo Relacional">
-    <meta name="description" content="Alt text">
+    <meta name="description" content="A maneira que boa parte das coisas foram convertidas do MER para o Modelo Relacional é clara o suficiente, mas ainda existem alguns pontos a se falar:">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://artistrea.github.io/BDocs/segunda-entrega/diagrama-relacional/">
@@ -21,23 +21,23 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://artistrea.github.io/BDocs/segunda-entrega/diagrama-relacional/">
     <meta property="og:title" content="Diagrama do Modelo Relacional">
-    <meta property="og:description" content="Alt text">
+    <meta property="og:description" content="A maneira que boa parte das coisas foram convertidas do MER para o Modelo Relacional é clara o suficiente, mas ainda existem alguns pontos a se falar:">
     <meta property="og:image" content="https://artistrea.github.io/BDocs/segunda-entrega/diagramarelacional.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://artistrea.github.io/BDocs/segunda-entrega/diagrama-relacional/">
     <meta property="twitter:title" content="Diagrama do Modelo Relacional">
-    <meta property="twitter:description" content="Alt text">
+    <meta property="twitter:description" content="A maneira que boa parte das coisas foram convertidas do MER para o Modelo Relacional é clara o suficiente, mas ainda existem alguns pontos a se falar:">
     <meta property="twitter:image" content="https://artistrea.github.io/BDocs/segunda-entrega/diagramarelacional.png">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.5.0.751308649881" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.5.0.751310780850" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.751308649881" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.751310780850" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.751308649881" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.751310780850" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -172,17 +172,21 @@
         <span>Diagrama do Modelo Relacional</span>
     </h1>
 </doc-anchor-target>
+<p>A maneira que boa parte das coisas foram convertidas do MER para o Modelo Relacional é clara o suficiente, mas ainda existem alguns pontos a se falar:</p>
+<ul>
+<li>O hash da senha é guardada como <code v-pre>char(60)</code>;
+<ul>
+<li>Como será usada a função</li>
+</ul>
+</li>
+</ul>
 <p><figure class="content-center">
-    <img src="../diagramarelacional.png" alt="Alt text">
-    <figcaption class="caption">Alt text</figcaption>
+    <a href="https://dbdiagram.io/d/Trab-BD-63370a017b3d2034fff95595">
+        <img src="../diagramarelacional.png" alt="https://dbdiagram.io/d/Trab-BD-63370a017b3d2034fff95595">
+    </a>
+    <figcaption class="caption">https://dbdiagram.io/d/Trab-BD-63370a017b3d2034fff95595</figcaption>
 </figure>
 </p>
-<p><a href="https://dbdiagram.io/d/Trab-BD-63370a017b3d2034fff95595">link para o dbDiagram</a></p>
-<ul>
-<li>Para diferenciar se um Item é um livro ou MaterialDidatico se utiliza do atributo chave type, que é um Enum que pode ser livro ou materialDidatico.</li>
-<li>O status da Tabela Emprestimos é um Enum que pode ser: emAndamento ou concluido.</li>
-<li>A função da Tabela Usuario é um Enum que pode ser: administrador, chefe ou estudante.</li>
-</ul>
 
                                 
                                 <!-- Required only on API pages -->
