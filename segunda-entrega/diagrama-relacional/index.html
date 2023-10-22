@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/BDocs">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.751310780850">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.751329579463">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -12,7 +12,7 @@
     <!-- Primary Meta Tags -->
     <title>Diagrama do Modelo Relacional</title>
     <meta name="title" content="Diagrama do Modelo Relacional">
-    <meta name="description" content="A maneira que boa parte das coisas foram convertidas do MER para o Modelo Relacional é clara o suficiente, mas ainda existem alguns pontos a se falar:">
+    <meta name="description" content="https://dbdiagram.io/d/Trab-BD-63370a017b3d2034fff95595">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://artistrea.github.io/BDocs/segunda-entrega/diagrama-relacional/">
@@ -21,23 +21,23 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://artistrea.github.io/BDocs/segunda-entrega/diagrama-relacional/">
     <meta property="og:title" content="Diagrama do Modelo Relacional">
-    <meta property="og:description" content="A maneira que boa parte das coisas foram convertidas do MER para o Modelo Relacional é clara o suficiente, mas ainda existem alguns pontos a se falar:">
+    <meta property="og:description" content="https://dbdiagram.io/d/Trab-BD-63370a017b3d2034fff95595">
     <meta property="og:image" content="https://artistrea.github.io/BDocs/segunda-entrega/diagramarelacional.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://artistrea.github.io/BDocs/segunda-entrega/diagrama-relacional/">
     <meta property="twitter:title" content="Diagrama do Modelo Relacional">
-    <meta property="twitter:description" content="A maneira que boa parte das coisas foram convertidas do MER para o Modelo Relacional é clara o suficiente, mas ainda existem alguns pontos a se falar:">
+    <meta property="twitter:description" content="https://dbdiagram.io/d/Trab-BD-63370a017b3d2034fff95595">
     <meta property="twitter:image" content="https://artistrea.github.io/BDocs/segunda-entrega/diagramarelacional.png">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.5.0.751310780850" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.5.0.751329579463" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.751310780850" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.751329579463" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.751310780850" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.751329579463" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -172,14 +172,12 @@
         <span>Diagrama do Modelo Relacional</span>
     </h1>
 </doc-anchor-target>
-<p>A maneira que boa parte das coisas foram convertidas do MER para o Modelo Relacional é clara o suficiente, mas ainda existem alguns pontos a se falar:</p>
-<ul>
-<li>O hash da senha é guardada como <code v-pre>char(60)</code>;
-<ul>
-<li>Como será usada a função</li>
-</ul>
-</li>
-</ul>
+<doc-anchor-target id="o-diagrama">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#o-diagrama">#</doc-anchor-trigger>
+        <span>O diagrama</span>
+    </h2>
+</doc-anchor-target>
 <p><figure class="content-center">
     <a href="https://dbdiagram.io/d/Trab-BD-63370a017b3d2034fff95595">
         <img src="../diagramarelacional.png" alt="https://dbdiagram.io/d/Trab-BD-63370a017b3d2034fff95595">
@@ -187,6 +185,67 @@
     <figcaption class="caption">https://dbdiagram.io/d/Trab-BD-63370a017b3d2034fff95595</figcaption>
 </figure>
 </p>
+<p>A maneira que boa parte das coisas foram convertidas do MER para o Modelo Relacional é clara o suficiente, mas ainda existem alguns pontos a se falar.</p>
+<p>Começando pelo <strong>ponto mais interessante</strong>:</p>
+<doc-anchor-target id="considerações">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#considerações">#</doc-anchor-trigger>
+        <span>Considerações</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="como-implementar-uma-herança-em-sql">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#como-implementar-uma-herança-em-sql">#</doc-anchor-trigger>
+        <span>Como implementar uma herança em SQL?</span>
+    </h3>
+</doc-anchor-target>
+<ol>
+<li><strong><em>Single Table Inheritance</em></strong>:
+<ul>
+<li>Criar <strong>uma única tabela</strong> com todas as propriedades <strong>de todas as entidades</strong> na relação de herança, e diferenciar qual a entidade da linha/<em>row</em> com um atributo adicional;</li>
+<li>Isso cria <strong>problemas</strong>, pois, por exemplo, <strong>não pode</strong> se definir o atributo <strong>ISBN como não nulo</strong>, já que <code v-pre>&quot;Material Didatico&quot;</code>, <strong>que tem ISBN nulo, ocuparia a mesma tabela</strong> que <code v-pre>&quot;Livro&quot;</code>. Existem outros problemas, como <strong>dificuldade de diferenciação</strong> dos atributos de cada &quot;filho&quot;, etc.</li>
+</ul>
+</li>
+<li><strong><em>Concrete Table Inheritance</em></strong>:
+<ul>
+<li>Fazer <strong>uma tabela para cada filho</strong> do relacionamento, colocando os atributos do parente em cada um dos filhos. Ou seja, a herança definida com <code v-pre>&quot;Item&quot;</code>, <code v-pre>&quot;Livro&quot;</code> e <code v-pre>&quot;Material Didatico&quot;</code> seria implementado usando uma tabela para <code v-pre>&quot;Livro&quot;</code> e uma para <code v-pre>&quot;Material Didatico&quot;</code>;</li>
+<li>Isso cria <strong>problemas</strong>, pois, por exemplo, teríamos não uma, mas <strong>duas tabelas</strong> que possuem com <strong>lógica de negócio semelhantes</strong> (o que significa código duplicado), e a partir daí <strong>mais duas tabelas</strong> de <code v-pre>&quot;Emprestimo&quot;</code> diferentes, <strong>multiplicando o problema</strong> por 2. Manutenção e alteração das tabelas está mais suscetível a erro humano, pois coisas que <strong>estão</strong> muito <strong>próximas</strong> entre si <strong>na modelagem</strong> estão sendo <strong>implementados</strong> mais <strong>distantes</strong>. Busca pelos itens independente do tipo fica mais difícil, e necessitaria de <code v-pre>UNION</code>&#x27;s.</li>
+</ul>
+</li>
+<li><strong><em>Class Table Inheritance</em></strong>:
+<ul>
+<li>Fazer uma <strong>tabela com os atributos comuns</strong> entre os filhos (representando o pai). Então implementar <strong>cada filho</strong> como sua própria <strong>tabela</strong>, a qual tem <strong>chave primária</strong> que <strong>também</strong> funciona como <strong>chave estrangeira</strong> para seu <strong>pai</strong>;</li>
+<li>Um <strong>problema</strong> conhecido dessa implementação é a dificuldade em <strong>encontrar os filhos</strong> a partir <strong>do pai</strong>. <strong>Geralmente</strong> é necessário <strong>procurar em tabela por tabela</strong> dos filhos. No entanto, utilizar o atributo <strong>type</strong> no <strong>pai</strong> é o suficiente para diferenciar em <strong>qual tabela procurar</strong>.</li>
+</ul>
+</li>
+</ol>
+<p>Com todas essas considerações, e visto que não foram feitas todas as considerações possíveis, somente as pensadas mais relevantes para o problema, foi decidido que <strong>a melhor opção é</strong> usar <strong><em>Class Table Inheritance</em></strong>.</p>
+<doc-anchor-target id="outros-detalhes-de-implementação">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#outros-detalhes-de-implementação">#</doc-anchor-trigger>
+        <span>Outros Detalhes de Implementação</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li><strong>Foram criados tipos Enum</strong> para os campos <code v-pre>&quot;Emprestimos&quot;.&quot;status&quot;</code>, <code v-pre>&quot;Usuarios&quot;.&quot;funcao&quot;</code>, <code v-pre>&quot;Items&quot;.&quot;type&quot;</code>, pois
+<ul>
+<li>Isso torna o banco de dados uma fonte de verdade mais abrangente, contendo segurança de tipos ao inserir valores nesses campos;</li>
+</ul>
+</li>
+</ul>
+<br/>
+<ul>
+<li>Sobre <code v-pre>&quot;Emprestimos&quot;</code>, além de usar <code v-pre>(itemId, itemType, userId, dataDeEmprestimo)</code> como <em>PK</em>, também será usado um <strong>index único</strong> para <code v-pre>(status, )</code></li>
+</ul>
+<br/>
+<ul>
+<li>O <strong>hash da senha é</strong> guardada como <strong><code v-pre>char(60)</code></strong>, pois
+<ul>
+<li>A função de criptografia sempre gera um hash de mesmo tamanho;</li>
+<li>Em específico, usar <a href="https://www.postgresql.org/docs/current/pgcrypto.html#PGCRYPTO-PASSWORD-HASHING-FUNCS">crypto do pgcrypto</a> com o algoritmo <code v-pre>bf</code> gera output de tamanho <code v-pre>60</code>;</li>
+</ul>
+</li>
+</ul>
 
                                 
                                 <!-- Required only on API pages -->
