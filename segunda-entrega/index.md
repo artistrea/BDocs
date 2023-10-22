@@ -1,5 +1,5 @@
 ---
-icon: table
+icon: database
 ---
 
 # Segunda entrega

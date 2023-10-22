@@ -1,3 +1,7 @@
+---
+icon: diamond
+---
+
 # Diagrama do Modelo Entidade-Relacionamento (MER)
 
 O diagrama foi feito praticamente exatamente conforme as especificações.
