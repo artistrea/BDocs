@@ -13,7 +13,7 @@ Essa documentação utiliza [retype](https://retype.com/) para gerar o site est�
 - Samuel Carvalho - 211010388
 - Miguel Carvalho - 211068341
 
-## Como contribuir
+## Como rodar a documentação
 
 ### Instalando o retype
 
