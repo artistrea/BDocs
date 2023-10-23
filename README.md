@@ -1,4 +1,5 @@
-# BDocs
+# Projeto Prático de Bancos de Dados (2023.2)
+**Tema: Sistema de Gerenciamento de Materiais para um Laboratório Didático**
 
 Documentação para o projeto de banco de dados da UnB
 
