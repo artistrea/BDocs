@@ -4,7 +4,8 @@
 Documentação para o projeto de banco de dados da UnB
 
 Essa documentação utiliza [retype](https://retype.com/) para gerar o site estático.
-
+## Link Para o Vídeo de Apresentação
+[https://drive.google.com/file/d/1rtjihYzAl5Vrb8SFpmTu8qaa8OGhkySU/view?usp=sharing](https://drive.google.com/file/d/1rtjihYzAl5Vrb8SFpmTu8qaa8OGhkySU/view?usp=sharing)
 ## Grupo 08
 
 - Artur Padoves - 211038208
